@@ -4,8 +4,7 @@ from socket import socket, AF_INET, SOCK_DGRAM
 
 def send_to_backend(message):
     s = socket(AF_INET, SOCK_DGRAM)
-    #address = ('backend', BACKEND_PORT)
-    address = ('0.0.0.0', BACKEND_PORT)
+    address = ('backend', BACKEND_PORT)
     print(f'sending {message} to backend')
     s.sendto(message.encode(), address)
     return s.recv(1024).decode()

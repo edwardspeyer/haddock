@@ -4,5 +4,5 @@ FROM alpine
 RUN apk add python3
 WORKDIR /haddock
 COPY . .
-EXPOSE 8880
-CMD python3 -m backend
+EXPOSE 8881
+CMD python3 -m frontend

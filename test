@@ -1,0 +1,26 @@
+#!/bin/bash
+
+FRONTEND_URL=http://localhost:8881
+
+GET() {
+  echo    "----"
+  echo    "< GET $1"
+  echo -n "> "
+  curl $FRONTEND_URL/$1
+  echo
+}
+
+POST() {
+  echo    "----"
+  echo    "< POST $1"
+  echo -n "> "
+  curl -X POST $FRONTEND_URL/$1
+  echo
+}
+
+
+POST george/brown
+GET  george
+
+POST george/tabby
+GET  george
