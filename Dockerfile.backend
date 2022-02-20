@@ -1,0 +1,8 @@
+# vim: ft=dockerfile
+
+FROM alpine
+RUN apk add python3
+WORKDIR /haddock
+COPY database database
+EXPOSE 8880
+CMD python3 -m database
